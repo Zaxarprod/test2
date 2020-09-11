@@ -1,0 +1,25 @@
+.table{
+  width: 100%;
+  tr{
+    th{
+      background-color: blueviolet;
+      color: white;
+      height: 7vh;
+      b{
+        margin-left: 10%;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    td{
+      text-align: center;
+      background-color: coral;
+      color: white;
+      height: 5vh;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

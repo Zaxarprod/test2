@@ -1,0 +1,22 @@
+.buttonBlock{
+  display: flex;
+  div{
+    width: 50%;
+    height: 60px;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.7s ease-out;
+    &:hover{
+      background-color: white;
+      color: blueviolet;
+      cursor: pointer;
+    }
+  }
+  div:first-child{
+    margin-right: 10px;
+  }
+}

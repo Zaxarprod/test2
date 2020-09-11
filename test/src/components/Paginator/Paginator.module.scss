@@ -1,0 +1,33 @@
+.paginator{
+  margin-top: 30px;
+  display: flex;
+  //width: 300px;
+  justify-content: center;
+  div{
+    width: 50%;
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+    transition: all 0.7s ease-out;
+    text-align: center;
+    line-height: 50px;
+    padding: 10px;
+    &:hover{
+      cursor: pointer;
+      background-color: white;
+      color: blueviolet;
+    }
+  }
+  div:first-child{
+    margin-right: 10px;
+  }
+  .disabled{
+    background-color: gray;
+    color: #c1bfbf;
+    &:hover{
+      cursor: initial;
+      background-color: gray;
+      color: #c1bfbf;
+    }
+  }
+}

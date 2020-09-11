@@ -1,0 +1,14 @@
+.add{
+  padding-right: 1%;
+}
+
+.myButton{
+  height: 3vh;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 6px;
+  padding: 2vh;
+  &:hover{
+    cursor: pointer;
+  }
+}
