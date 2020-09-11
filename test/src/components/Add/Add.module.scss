@@ -1,5 +1,6 @@
 .add{
   padding-right: 1%;
+  display: flex;
 }
 
 .myButton{
@@ -10,5 +11,17 @@
   padding: 2vh;
   &:hover{
     cursor: pointer;
+  }
+}
+
+.form{
+  display: flex;
+  justify-content: flex-end;
+  input{
+    width: 12%;
+    border: 2px solid blueviolet;
+    margin-right: 2%;
+    text-align: center;
+    border-radius: 6px;
   }
 }

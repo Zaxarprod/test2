@@ -6,6 +6,7 @@ export const SORT_UP = 'table/SORT_UP'
 export const SORT_DOWN = 'table/SORT_DOWN'
 export const FILTER = 'table/FILTER'
 export const CURRENT_USER = 'table/CURRENT_USER'
+export const ADD_USER = 'table/ADD_USER'
 
 const initialState = {
     table: [],
@@ -13,10 +14,27 @@ const initialState = {
     filterTable: null,
     currentUser: null,
     isInit: false,
+    addForm: {
+        idText: '',
+        lastNameText: '',
+        firstNameText: '',
+        emailText: '',
+        phoneText: '',
+    }
 }
 
 export const tableReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ADD_USER:
+            let table3 = state.table
+            table3.unshift(action.user)
+            let filterTable = state.filterTable
+            filterTable.unshift(action.user)
+            return {
+                ...state,
+                table: table3,
+                filterTable: filterTable,
+            }
         case CURRENT_USER:
             return {
                 ...state,
