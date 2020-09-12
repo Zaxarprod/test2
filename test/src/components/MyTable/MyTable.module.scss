@@ -23,3 +23,7 @@
     }
   }
 }
+.loader{
+  transform: translateX(calc(50vw - 50px));
+  width: 100px;
+}

@@ -1,7 +1,9 @@
 import React from "react"
 import style from './Add.module.scss'
+import {addUserTC} from "../../redux/table-reducer";
+import {connect} from "react-redux";
 
-export class Add extends React.Component {
+class Add extends React.Component {
     constructor(props) {
         super(props)
         this.state={
@@ -51,6 +53,13 @@ export class Add extends React.Component {
                 </div>}
                 {flag && <div className={style.myButton}
                               onClick={()=>{
+                                  this.props.addUserTC({
+                                      id: this.state.idText,
+                                      lastName: this.state.lastNameText,
+                                      firstName: this.state.firstNameText,
+                                      email: this.state.emailText,
+                                      phone: this.state.phoneText,
+                                  })
                                   this.setState({
                                       isVisible: false,
                                       idText: '',
@@ -66,3 +75,9 @@ export class Add extends React.Component {
         )
     }
 }
+
+let mapStateToProps = (state) => ({
+
+})
+
+export default connect(mapStateToProps,{addUserTC,})(Add)

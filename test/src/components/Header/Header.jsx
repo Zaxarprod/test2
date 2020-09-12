@@ -1,7 +1,8 @@
 import React from "react"
 import style from './Header.module.scss'
 import {Filter} from "../Filter/Filter";
-import {Add} from "../Add/Add";
+import Add from "../Add/Add";
+
 
 export const Header = () => {
     return (

@@ -1,12 +1,13 @@
 import React, {useState} from "react"
 import style from './MyTable.module.scss'
-import {useDispatch, useSelector} from "react-redux";
-import {getCurrentPageSelector, getCurrentUserSelector, getIsInitSelector} from "../../redux/table-selector";
-import {Paginator} from "../Paginator/Paginator";
-import {setCurrentUser, sortDownAC, sortUpAC} from "../../redux/table-reducer";
-import {Filter} from "../Filter/Filter";
-import {CurrentUser} from "../CurrentUser/CurrentUser";
-import {Header} from "../Header/Header";
+import {useDispatch, useSelector} from "react-redux"
+import {getCurrentPageSelector, getCurrentUserSelector, getIsInitSelector} from "../../redux/table-selector"
+import {Paginator} from "../Paginator/Paginator"
+import {setCurrentUser, sortDownAC, sortUpAC} from "../../redux/table-reducer"
+import {Filter} from "../Filter/Filter"
+import {CurrentUser} from "../CurrentUser/CurrentUser"
+import {Header} from "../Header/Header"
+import loader from './../../common/images/loader.gif'
 
 export const MyTable = ({table}) => {
     const [isSorted, setIsSorted] = useState(null)
@@ -90,6 +91,10 @@ export const MyTable = ({table}) => {
                     })
                 }
             </table>
+            {!isInit &&
+            <img
+                className={style.loader}
+                src={loader}/>}
             {currentUser && <CurrentUser currentUser={currentUser} />}
             <Paginator currentPage={currentPage} length={isInit?table.length:0} />
         </>
